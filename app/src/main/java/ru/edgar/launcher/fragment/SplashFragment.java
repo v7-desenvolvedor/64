@@ -139,10 +139,7 @@ public class SplashFragment extends MainActivity{
                     public void onResponse(Call<Api> call, Response<Api> response) {
                         if(response.isSuccessful())
                         {
-                            if(response.body() != null) {
-                                if(response.body().getLauncherVersion() != 34) {
-                                    MainActivity.getMainActivity().openDialog(R.drawable.ic_launcher_question, "Доступна новая версия клиента!\nЗагрузить обновление?", "Да", "Нет", new downloadApk(response.body().getLauncherUrl(), response.body().getLauncherPath(), response.body().getLauncherName()), new noUpdate());
-                                } else {
+                            if(response.body() != null) {             
                                     if (response.body().getIsTest()) {
                                         if (!response.body().getTestApi()) {
                                             MainActivity.getMainActivity().openDialog(R.drawable.ic_launcher_alert, "Тестовая версия клиента закрыта!\nОжидайте следующих тестов...", "Понял", null, new onDes(), null);
@@ -302,7 +299,7 @@ public class SplashFragment extends MainActivity{
                                         public void onFailure(Call<Main> call, Throwable t) {
                                         }
                                     });
-                                }
+                                
                             } else {
                                 Log.e("api-", "api----");
                                 MainActivity.getMainActivity().openDialog(R.drawable.ic_launcher_alert, "Не удаётся установить соединение с сервером!\nПовторите попытку позже.", "Повторить", null, new loadJsonRepit(), null);

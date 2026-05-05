@@ -256,13 +256,9 @@ public class MainFragment extends MainActivity {
                                     }
                                 }
 
-                                if (url.size() != 0) {
-                                    MainActivity.getMainActivity().loadingFragment.hide();
-                                    MainActivity.getMainActivity().dialogFragment.show(R.drawable.ic_launcher_question, "Доступно обновление!\nЗагрузить " + Utils.bytesIntoHumanReadable(si) + "?", "Да", "Нет", new DownloadStart(url, path, unZip, toUnZip), new DialogFragment.closeDialog());
-                                } else {
                                     MainActivity.getMainActivity().loadingFragment.hide();
                                     MainActivity.getMainActivity().startActivity(new Intent(MainActivity.getMainActivity(), SAMP.class));
-                                }
+
 
 
                                 //TODO тут проверка на кеш!!!!!!!!! и переход в download fragment

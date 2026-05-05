@@ -393,7 +393,7 @@ void CVehicle::toggleLeftTurnLight(bool toggle)
 */
 #include "common.h"
 #include "game/Timer.h"
-#include "game/camera.h"
+#include "game/Camera.h"
 
 #include "game/Events/Event.h"
 

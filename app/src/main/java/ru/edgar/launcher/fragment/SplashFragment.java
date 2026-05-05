@@ -140,12 +140,7 @@ public class SplashFragment extends MainActivity{
                         if(response.isSuccessful())
                         {
                             if(response.body() != null) {             
-                                    if (response.body().getIsTest()) {
-                                        if (!response.body().getTestApi()) {
-                                            MainActivity.getMainActivity().openDialog(R.drawable.ic_launcher_alert, "Тестовая версия клиента закрыта!\nОжидайте следующих тестов...", "Понял", null, new onDes(), null);
-                                        }
-                                        testApi = response.body().getTestApi();
-                                    }
+                    
                                     Lists.archives.clear();
                                     Lists.archives.addAll(response.body().getArchives());
                                     Lists.deleted.clear();

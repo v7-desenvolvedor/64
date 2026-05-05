@@ -48,7 +48,7 @@ android {
         applicationId 'ru.edgar.space'
         minSdk 26
         targetSdk 34
-        versionCode 105
+        versionCode 34
         versionName "0.8.2.1"
 
         multiDexEnabled true
